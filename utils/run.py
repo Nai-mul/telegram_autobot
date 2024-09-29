@@ -70,7 +70,7 @@ async def run_soft():
             
             os.chdir(f'bots/{folders[cur_idx]}')
             process = await asyncio.create_subprocess_exec(
-                'python' if os.name == 'nt' else 'python3.11',
+                'python3' if os.name == 'nt' else 'python3.10',
                 f'main.py',
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE
